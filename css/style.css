@@ -1,0 +1,235 @@
+body {
+  display: flex;
+  flex-direction: column;
+  color: #990000;
+  min-height: 100vh;
+  margin: 0;
+  line-height: 100%;
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+  font-size: 13pt;
+  font-weight: 400;
+  line-height: 2em;
+}
+
+
+.main{
+  padding: 1em;
+  background: #ffffff;
+  text-align: center;
+}
+
+.footer{
+  padding: 1em;
+  background: #F2F2F2;
+  text-align: center;
+}
+
+h1{
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  line-height: 2em;
+  margin: 0 0 1em 0;
+  text-transform: uppercase;
+  color: white;
+  margin: auto;
+  animation: my-animation 1s linear 1;
+}
+h2{
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  line-height: 2em;
+  margin: 0 0 1em 0;
+  text-transform: uppercase;
+  color:  #990000;
+  margin: auto;
+  animation: my-animation 1.5s linear 1;
+}
+  /* ^ set the animation-name, animation-duration, animation-timing-function and animation-iteration-count */
+
+@keyframes my-animation {
+  0% { /* start of the animation */
+    transform: translate3d(-10%, 0, 0);
+    opacity: 0;
+  }
+  100% { /* end of the animation */
+    transform: none;
+    opacity: 1;
+  }
+}
+
+.tablealign{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+table{
+  border-spacing: 0.5em;
+  flex-direction: row;
+}
+tr{
+  background-color: #D3D3D3;
+}
+
+td{
+  background-color: #F2F2F2;
+  padding: 1em;
+}
+.wrapper{
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 auto;
+}
+
+.nav {
+  display: flex;
+  order: -1;
+  padding: 0em;
+  background: #F2F2F2;
+  flex-direction: column;
+}
+
+.navbtnalign{
+  display:flex;
+  padding: 1em;
+  flex-direction: column;
+  flex: 1 0 auto;
+  justify-content: center;
+  justify-content: space-around;
+}
+
+.button {
+  display:flex;
+  border-radius: 2.5em;
+  display: inline-block;
+  font-weight: 700;
+  height: 2.85em;
+  line-height: 2.95em;
+  min-width: 10em;
+  padding: 0em;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-color: transparent;
+  box-shadow: inset 0 0 0 3px #ffffff;
+  color: #ffffff;
+}
+
+.btninactive{
+  display:flex;
+  border-radius: 2.5em;
+  display: inline-block;
+  font-weight: 700;
+  height: 2.85em;
+  line-height: 2.95em;
+  min-width: 10em;
+  padding: 0em;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-color: #ffffff;
+  box-shadow: inset 0 0 0 3px #ffffff;
+  color: black;
+}
+
+.bannertop {
+  margin-top: 1em;
+  margin-left: 0em;
+  margin-right: 0em;
+  padding: 1em 0 1em 0;
+  background-color: #1E2832;
+
+  background-attachment: fixed;
+  width: 100%;
+  background-size: 100%;
+  text-align: center;
+}
+
+.bannerbottom {
+  margin-bottom: 1em;
+  margin-left: 0em;
+  margin-right: 0em;
+  padding: 1em 0 1em 0;
+  background-color: #1E2832;
+  color: rgba(255, 255, 255, 0.75);
+  background-attachment: fixed;
+  background-size: cover;
+  text-align: center;
+}
+
+.footer{
+  background: #F2F2F2;
+  padding: 0;
+}
+
+.aside{
+  padding: 1em;
+  background: #F2F2F2;
+  text-align: center;
+}
+
+.side{
+  padding: 5em;
+  flex-direction: row;
+}
+@media (max-width: 50em){
+  .main{
+    flex: 1 0 auto;
+  }
+
+  .tablealign{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav {
+    padding: 1em;
+    align-items: stretch;
+    justify-content: space-between;
+  }
+
+  .navbtnalign{
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-between;
+
+  }
+
+  .bannertop{
+    background-position:0em 2em;
+    background-size: contain;
+  }
+
+  .button{
+    flex:auto;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-between;
+  }
+
+}
+
+@media (min-width: 50em){
+
+  .nav {
+
+  }
+  .wrapper{
+    flex-direction: row;
+  }
+  .navbtnalign{
+    flex-direction: row;
+
+  }
+  .button{
+    flex:auto;
+  }
+  .main{
+    flex:auto;
+  }
+  .aside{
+    width: 40%;
+  }
+}
