@@ -1,16 +1,28 @@
 body {
-  display: flex;
-  flex-direction: column;
   color: #990000;
-  min-height: 100vh;
   margin: 0;
   line-height: 100%;
   text-align: center;
+  justify-content: center;
   font-family: 'Raleway', sans-serif;
   font-size: 13pt;
   font-weight: 400;
   line-height: 2em;
 }
+
+.home{
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    margin: 0;
+    overflow: hidden;
+    background-image: url(../images/overlay.png), url(../images/sombrawallbig@0,5x.jpg);
+    top: 0;
+
+    width: 100%;
+    height: 100%;
+  }
 
 
 .main{
@@ -20,36 +32,53 @@ body {
 }
 
 .footer{
-  padding: 1em;
-  background: #F2F2F2;
-  text-align: center;
+text-align: center;
+position: absolute;
+bottom: 0;
+left: 0;
+right: 0;
+background-color: rgba(240, 240, 240, 0.8);;
+  padding: 0.5em;
 }
+
 
 h1{
   letter-spacing: 0.1em;
   font-weight: 700;
   line-height: 2em;
-  margin: 0 0 1em 0;
   text-transform: uppercase;
   color: white;
   margin: auto;
-  animation: my-animation 1s linear 1;
+  animation: my-animation 1.5s linear 1;
 }
 h2{
   letter-spacing: 0.1em;
   font-weight: 700;
   line-height: 2em;
+
   margin: 0 0 1em 0;
   text-transform: uppercase;
   color:  #990000;
   margin: auto;
-  animation: my-animation 1.5s linear 1;
+  animation: my-animation 1s linear 1;
 }
+
   /* ^ set the animation-name, animation-duration, animation-timing-function and animation-iteration-count */
 
 @keyframes my-animation {
   0% { /* start of the animation */
     transform: translate3d(-10%, 0, 0);
+    opacity: 0;
+  }
+  100% { /* end of the animation */
+    transform: none;
+    opacity: 1;
+  }
+}
+
+@keyframes contact-anim {
+  0% { /* start of the animation */
+    transform: translate3d(0, 10%, 0);
     opacity: 0;
   }
   100% { /* end of the animation */
@@ -86,7 +115,6 @@ td{
   display: flex;
   order: -1;
   padding: 0em;
-  background: #F2F2F2;
   flex-direction: column;
 }
 
@@ -99,6 +127,28 @@ td{
   justify-content: space-around;
 }
 
+a .fa {
+color: #990000;
+}
+
+a .fa:hover {
+color: #ffffff;
+}
+
+a.button:hover {
+  box-shadow: inset 0 0 0 3px #990000;
+  color: #990000;
+}
+
+.contactbtns{
+  display:flex;
+  flex-direction: row;
+
+  justify-content: center;
+  justify-content: space-around;
+  animation: contact-anim 1s linear 1;
+}
+
 .button {
   display:flex;
   border-radius: 2.5em;
@@ -107,7 +157,6 @@ td{
   height: 2.85em;
   line-height: 2.95em;
   min-width: 10em;
-  padding: 0em;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
@@ -124,7 +173,6 @@ td{
   height: 2.85em;
   line-height: 2.95em;
   min-width: 10em;
-  padding: 0em;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
@@ -145,6 +193,15 @@ td{
   width: auto;
   background-size: 100%;
   text-align: center;
+
+
+
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+  top: 0;
 }
 
 .bannerbottom {
@@ -157,11 +214,17 @@ td{
   background-attachment: fixed;
   background-size: cover;
   text-align: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0.5em;
 }
 
-.footer{
-  background: #F2F2F2;
-  padding: 0;
+.center{
+  flex-direction: column;
+  margin-top: 20%;
+  position: relative;
 }
 
 .aside{
@@ -177,6 +240,10 @@ td{
 @media (max-width: 50em){
   .main{
     flex: 1 0 auto;
+  }
+
+  a .fa {
+  padding: 0.5em;
   }
 
   .tablealign{
@@ -198,7 +265,7 @@ td{
 
   }
 
-  .bannertop{
+  .banner{
     background-position:0em 2em;
     background-size: contain;
   }
@@ -214,9 +281,6 @@ td{
 
 @media (min-width: 50em){
 
-  .nav {
-
-  }
   .wrapper{
     flex-direction: row;
   }
@@ -233,4 +297,98 @@ td{
   .aside{
     width: 40%;
   }
+}
+
+
+
+
+
+@media screen and (max-width: 1680px) {
+
+  #banner {
+    padding: 11em 0 9em 0;
+  }
+
+}
+
+@media screen and (max-width: 1280px) {
+
+  #banner {
+    padding: 9em 0 7em 0;
+  }
+
+    #banner h2 {
+      font-size: 2em;
+    }
+
+}
+
+@media screen and (max-width: 980px) {
+
+  #banner {
+    padding: 8em 2em 6em 2em;
+  }
+
+}
+
+@media screen and (max-width: 736px) {
+
+  #banner {
+    padding: 5em 2em 3em 2em;
+  }
+
+    #banner h2 {
+      font-size: 1.5em;
+    }
+
+    #banner p {
+      font-size: 1em;
+    }
+
+    #banner .icon {
+      font-size: 2em;
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+
+  #banner {
+    padding: 5em 2em 3em 2em;
+  }
+
+    #banner .icon {
+      font-size: 1.5em;
+    }
+
+}
+
+/* Main */
+
+#main {
+padding: 5em 0 3em 0;
+}
+
+@media screen and (max-width: 1280px) {
+
+  #main {
+    padding: 4em 0 2em 0;
+  }
+
+}
+
+@media screen and (max-width: 980px) {
+
+  #main {
+    padding: 3em 0 1em 0;
+  }
+
+}
+
+@media screen and (max-width: 736px) {
+
+  #main {
+    padding: 2em 0 0.1em 0;
+  }
+
 }
