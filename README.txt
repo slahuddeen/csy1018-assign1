@@ -1,7 +1,7 @@
 ----------------------------
-csy1018 assignment 1
+csy1018 assignment 1 Muhammad Slahuddeen 16423832
 --------------------------
-Refer to the word doc (readme.docx) for the full report with images
+Refer to the word doc (readme.docx in supporting_docs) for the full report with images
 -----------------------------
 
 

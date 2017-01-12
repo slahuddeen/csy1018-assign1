@@ -164,7 +164,7 @@ a.bannerbutton:hover {
 
 .center {
     flex-direction: column;
-    margin-top: 20%;
+    margin-top: 10%;
     position: relative;
 }
 
@@ -347,6 +347,13 @@ create distinct image blocks that are shrunken down versions of the full image *
 .thumbnail-image {
     display: block;
     width: 100%;
+}
+
+.profile{
+  padding-top: 1em;
+  width: 50%;
+  height: 50%;
+
 }
 
 
@@ -540,6 +547,7 @@ a .fa:hover {
 /* orders the contact buttons to follow the footer */
 
 .contactbtns {
+    list-style-type: none;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -592,6 +600,7 @@ to get it in the center of the screen */
         justify-content: space-between;
     }
     .navbtnalign {
+        list-style-type: none;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -624,7 +633,6 @@ to get it in the center of the screen */
         width: 40%;
     }
 }
-
 
 /* Sources
 All images on the site belong to me, I have either created them or photographed them.
