@@ -601,7 +601,6 @@ to get it in the center of the screen */
         justify-content: space-between;
     }
     .navbtnalign {
-        list-style-type: none;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
